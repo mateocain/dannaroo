@@ -165,10 +165,3 @@ body {
     filter: hue-rotate(360deg);
   }
 }
-
-@media (max-width: 927px) {
-  body,
-  html {
-    overflow-x: hidden;
-  }
-}
