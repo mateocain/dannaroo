@@ -1,0 +1,51 @@
+.mobile-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  z-index: 999;
+  background: var(--c-neon-purple);
+}
+
+.mobile-menu a {
+  display: block;
+  margin: 2.5rem 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-left: 4rem;
+}
+
+.mobile-menu :first-child {
+  margin-top: 20vh;
+}
+
+.mobile-menu .floral {
+  position: absolute;
+  height: 50px;
+  background-position: 0 -40px;
+  width: 100%;
+  bottom: 0;
+  background-size: 350px;
+  z-index: -1;
+  animation: moveBg 1000s infinite linear;
+}
+
+@keyframes moveBg {
+  from {
+    background-position: 0 -40px;
+  }
+  to {
+    background-position: 100000px -40px;
+  }
+}
+
+.mobile-menu .email-form input {
+  width: 50%;
+}
+
+.mobile-menu .email-form {
+  width: 100%;
+}

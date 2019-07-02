@@ -1,0 +1,41 @@
+.footer {
+  background: #303030;
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.footer .map {
+  width: 30vw;
+  height: 30vw;
+  margin-right: 1rem;
+}
+
+.footer .info {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.footer .info span {
+  margin-bottom: 12px;
+}
+
+.footer .info a {
+  color: var(--c-neon-pink);
+}
+
+.footer .map > div > div {
+  width: unset !important;
+  height: unset !important;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+  }
+}

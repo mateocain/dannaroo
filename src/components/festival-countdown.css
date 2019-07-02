@@ -1,0 +1,23 @@
+.festival-countdown {
+  display: inline-block;
+}
+
+.festival-countdown > div {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.festival-countdown > div > span {
+  display: block;
+}
+
+.festival-countdown > div > span:first-child {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.festival-countdown > div > span:last-child {
+  font-size: 1rem;
+}

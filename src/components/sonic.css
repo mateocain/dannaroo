@@ -1,0 +1,18 @@
+.sthh {
+  animation: play 0.4s steps(8) infinite, run 5s linear infinite;
+}
+
+@keyframes play {
+  100% {
+    background-position: 280px;
+  }
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw - 35px));
+  }
+}

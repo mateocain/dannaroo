@@ -1,0 +1,83 @@
+.splash-container {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #212121;
+  text-transform: uppercase;
+  animation: splashThanos 0.5s ease 5s 1 forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation-play-state: paused;
+  z-index: 1000;
+}
+
+.splash-container .wrapper {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.splash-container .wrapper .top,
+.splash-container .wrapper .bottom {
+  position: relative;
+}
+
+.splash-container .wrapper .top {
+  animation: disappear 0.5s ease 4s 1 forwards;
+}
+
+.splash-container .wrapper .bottom {
+  animation: disappear 0.5s ease 4.25s 1 forwards;
+}
+
+@media (max-width: 1050px) {
+  .splash-container .wrapper {
+    width: 80%;
+  }
+}
+
+.splash-container .wrapper .top .logo {
+  text-align: center;
+}
+
+.splash-container .wrapper .top .info {
+  font-size: 1.5rem;
+  margin-top: 8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.splash-container .wrapper .bottom {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.splash-container .bottom span {
+  animation: text-flicker-in-glow 2s linear;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.splash-container .logo img {
+  animation: colorRotate 3s linear infinite;
+}
+
+@keyframes disappear {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes splashThanos {
+  100% {
+    transform: translateY(-100vh);
+  }
+}

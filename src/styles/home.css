@@ -1,0 +1,116 @@
+.hp--countdown {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.hp--countdown h3 {
+  font-family: "Bungee Shade", cursive;
+  color: var(--c-neon-blue);
+  letter-spacing: 3px;
+  font-size: 2.6rem;
+  margin: 6px;
+}
+
+.sonic-track {
+  margin-top: 2rem;
+}
+
+.hp--content {
+  margin: auto;
+
+  display: grid;
+  width: 90vw;
+  height: 50vw;
+  grid-template-columns: 1fr 1fr 2fr 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "a a a . . ."
+    "a a a . . ."
+    "a a a . b b"
+    ". . . . b b"
+    "c c c . b b"
+    "c c c . . ."
+    "c c c . . .";
+}
+
+@media (max-width: 927px) {
+  .hp--content {
+    grid-template-rows: 200px 200px 100px 200px 200px 100px 200px 200px;
+    height: unset;
+    grid-template-areas:
+      "a a a a a a"
+      "a a a a a a"
+      ". . . . . ."
+      "b b b b b b"
+      "b b b b b b"
+      ". . . . . ."
+      "c c c c c c"
+      "c c c c c c";
+  }
+}
+
+.hp--content > div {
+  position: relative;
+}
+
+.hp--content > div > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hp--content > div:hover > div:first-child {
+  filter: blur(8px);
+}
+
+.hp--content > div > div:first-child {
+  background-color: #1f1b1b;
+  background-position: center;
+  background-size: cover;
+  filter: blur(1px);
+}
+
+.hp--content > div > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.hp--content > div a {
+  color: white;
+}
+
+.hp--content .presale {
+  grid-area: a;
+}
+
+.hp--content > div span {
+  padding: 6px;
+}
+
+.hp--content .presale span {
+  background-color: var(--c-neon-blue);
+}
+
+.hp--content .experiences span {
+  background-color: var(--c-neon-green);
+}
+
+.hp--content .transportation span {
+  background-color: var(--c-neon-purple);
+}
+
+.hp--content .experiences {
+  grid-area: b;
+}
+
+.hp--content .transportation {
+  grid-area: c;
+}

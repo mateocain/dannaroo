@@ -1,0 +1,19 @@
+@media (max-width: 927px) {
+  .shell-body {
+    top: 166px;
+    height: calc(100% - 166px);
+  }
+}
+
+@media (min-width: 928px) {
+  .shell-body {
+    top: 198px;
+    height: calc(100% - 198px);
+  }
+}
+
+.shell-body {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
