@@ -28,7 +28,7 @@ export default function MobileNav({ open }: Props) {
       <a
         onMouseEnter={() => setBgColor("var(--c-neon-orange)")}
         onMouseLeave={linkMouseOut}
-        href="/"
+        href="https://tickets.dannaroo.com/dannaroo/2019/"
       >
         Tickets
       </a>
