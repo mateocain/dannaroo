@@ -32,7 +32,10 @@ export default function Nav() {
             setMobileNavOpen(!mobileNavOpen)
           }}
         />
-        <MobileNav open={mobileNavOpen} />
+        <MobileNav
+          setClosed={() => setMobileNavOpen(false)}
+          open={mobileNavOpen}
+        />
       </nav>
     </div>
   )

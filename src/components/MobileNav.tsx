@@ -7,9 +7,10 @@ import EmailForm from "./EmailForm"
 
 interface Props {
   open: boolean
+  setClosed: () => void
 }
 
-export default function MobileNav({ open }: Props) {
+export default function MobileNav({ open, setClosed }: Props) {
   const initialBgColor = "var(--c-neon-purple"
   const [bgColor, setBgColor] = useState(initialBgColor)
 
@@ -30,12 +31,18 @@ export default function MobileNav({ open }: Props) {
         onMouseLeave={linkMouseOut}
         href="https://tickets.dannaroo.com/dannaroo/2019/"
         target="_blank"
+        onClick={() => {
+          setClosed()
+        }}
       >
         Tickets
       </a>
       <Link
         onMouseEnter={() => setBgColor("var(--c-neon-blue)")}
         onMouseLeave={linkMouseOut}
+        onClick={() => {
+          setClosed()
+        }}
         to="/lineup"
       >
         Lineup
@@ -44,6 +51,9 @@ export default function MobileNav({ open }: Props) {
         onMouseEnter={() => setBgColor("var(--c-neon-yellow)")}
         onMouseLeave={linkMouseOut}
         to="/lineup"
+        onClick={() => {
+          setClosed()
+        }}
       >
         Experience
       </Link>
