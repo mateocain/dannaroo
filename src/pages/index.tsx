@@ -14,7 +14,7 @@ import moment from "moment"
 
 export default function IndexPage() {
   const [splashComplete, setSplashComplete] = useState(false)
-  const [shouldSplash, setShouldSplash] = useState(true)
+  const [shouldSplash, setShouldSplash] = useState(false)
 
   useEffect(() => {
     const lastLoad = localStorage.getItem("lastLoad")
