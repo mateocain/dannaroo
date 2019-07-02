@@ -14,22 +14,24 @@ import moment from "moment"
 
 export default function IndexPage() {
   const [splashComplete, setSplashComplete] = useState(false)
-  let shouldSplash = false
+  const [shouldSplash, setShouldSplash] = useState(true)
 
-  const lastLoad = window.localStorage.getItem("lastLoad")
+  useEffect(() => {
+    const lastLoad = localStorage.getItem("lastLoad")
 
-  if (lastLoad) {
-    const diff = moment(moment.now()).diff(moment(lastLoad), "hours")
-    if (diff > 1) {
-      shouldSplash = true
+    if (lastLoad) {
+      const diff = moment(moment.now()).diff(moment(lastLoad), "hours")
+      if (diff > 1) {
+        setShouldSplash(true)
+      }
     }
-  }
 
-  if (!lastLoad) {
-    shouldSplash = true
-  }
+    if (!lastLoad) {
+      setShouldSplash(true)
+    }
 
-  window.localStorage.setItem("lastLoad", `${Date.now()}`)
+    localStorage.setItem("lastLoad", `${Date.now()}`)
+  }, [])
 
   return (
     <Fragment>
