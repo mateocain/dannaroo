@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment, useState, useEffect } from "react"
 import Splash from "../components/Splash"
 import Shell from "../components/Shell"
 import Countdown from "../components/FestivalCountdown"
@@ -10,13 +10,32 @@ import presale from "../images/gallery/presale.jpg"
 import exp from "../images/gallery/experiences.jpg"
 // @ts-ignore
 import trans from "../images/gallery/transportation.jpg"
+import moment from "moment"
 
 export default function IndexPage() {
   const [splashComplete, setSplashComplete] = useState(false)
+  let shouldSplash = false
+
+  const lastLoad = localStorage.getItem("lastLoad")
+
+  if (lastLoad) {
+    const diff = moment(moment.now()).diff(moment(lastLoad), "hours")
+    if (diff > 1) {
+      shouldSplash = true
+    }
+  }
+
+  if (!lastLoad) {
+    shouldSplash = true
+  }
+
+  localStorage.setItem("lastLoad", `${Date.now()}`)
 
   return (
     <Fragment>
-      {!splashComplete && <Splash setComplete={setSplashComplete} />}
+      {!splashComplete && shouldSplash && (
+        <Splash setComplete={setSplashComplete} />
+      )}
       <Shell>
         <div className="hp--countdown">
           <Countdown />

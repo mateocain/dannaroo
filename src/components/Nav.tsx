@@ -21,7 +21,9 @@ export default function Nav() {
           <Logo src={logo} width={"100%"} />
         </div>
         <div className="menu">
-          <a href="https://tickets.dannaroo.com/dannaroo/2019/">Tickets</a>
+          <a href="https://tickets.dannaroo.com/dannaroo/2019/" target="_blank">
+            Tickets
+          </a>
           <Link to="/lineup">Lineup</Link>
           <Link to="/lineup">Experience</Link>
         </div>

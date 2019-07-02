@@ -1,0 +1,64 @@
+.splash-container-lineup {
+  font-family: "Poppins", sans-serif;
+  background-color: #212121;
+  text-transform: uppercase;
+
+  animation-play-state: paused;
+  z-index: 1000;
+}
+
+.splash-container-lineup .wrapper {
+  width: 50%;
+  margin: 10vh auto 30vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-container-lineup .bottom > div {
+  /* transition: font-size 250ms ease; */
+}
+
+.splash-container-lineup .bottom > div:hover {
+  transform: scale(2) skew(10deg, 10deg);
+}
+
+.-lineup .wrapper .top,
+.splash-container-lineup .wrapper .bottom {
+  position: relative;
+}
+
+@media (max-width: 1050px) {
+  .splash-container-lineup .wrapper {
+    width: 80%;
+  }
+}
+
+.splash-container-lineup .wrapper .top .logo {
+  text-align: center;
+}
+
+.splash-container-lineup .wrapper .top .info {
+  font-size: 1.5rem;
+  margin-top: 8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.splash-container-lineup .wrapper .bottom {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.splash-container-lineup .bottom span {
+  animation: text-flicker-in-glow 2s linear;
+  animation-fill-mode: forwards;
+}
+
+.splash-container-lineup .logo img {
+  animation: colorRotate 3s linear infinite;
+}
