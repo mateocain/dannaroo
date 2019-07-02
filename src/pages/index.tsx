@@ -16,7 +16,7 @@ export default function IndexPage() {
   const [splashComplete, setSplashComplete] = useState(false)
   let shouldSplash = false
 
-  const lastLoad = localStorage.getItem("lastLoad")
+  const lastLoad = window.localStorage.getItem("lastLoad")
 
   if (lastLoad) {
     const diff = moment(moment.now()).diff(moment(lastLoad), "hours")
@@ -29,7 +29,7 @@ export default function IndexPage() {
     shouldSplash = true
   }
 
-  localStorage.setItem("lastLoad", `${Date.now()}`)
+  window.localStorage.setItem("lastLoad", `${Date.now()}`)
 
   return (
     <Fragment>
